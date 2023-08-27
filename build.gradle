@@ -10,7 +10,7 @@ group = 'com.book'
 version = '0.0.1-SNAPSHOT'
 
 java {
-    sourceCompatibility = '11'
+    sourceCompatibility = '15'
 }
 
 configurations {
@@ -46,7 +46,7 @@ dependencies {
     implementation group: 'cglib', name: 'cglib-nodep', version: '2.2'
 
     implementation 'org.apache.tiles:tiles-jsp:3.0.4'
-    implementation 'net.sf.json-lib:json-lib:2.4:jdk11'
+    implementation 'net.sf.json-lib:json-lib:2.4:jdk15'
     implementation fileTree(dir:'libs',include:['*.jar'])
     implementation files('libs/ojdbc8.jar')
 }
