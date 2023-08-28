@@ -1,6 +1,5 @@
-# Bookshop
+# spring boot를 통한 aws 배포
 
-<h1>spring boot를 통한 aws 배포</h1>
 http://ec2-3-128-204-47.us-east-2.compute.amazonaws.com:8070/main/main.do
 <div align="center">
 	<h3>:movie_camera: 메인페이지</h3>
