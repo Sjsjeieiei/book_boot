@@ -16,14 +16,14 @@
 		<result property="delivery_state" column="delivery_state" />
 
 		<result property="member_id" column="member_id" />
-		<result property="order_hp" column="order_hp" />
+		<result property="orderer_hp" column="orderer_hp" />
 
 		<result property="receiver_name" column="receiver_name" />
 		<result property="receiver_hp1" column="receiver_hp1" />
 		<result property="delivery_address" column="delivery_address" />
 		<result property="pay_method" column="pay_method" />
 		<result property="card_com_name" column="card_com_name" />
-		<result property="pay_order_hp_num" column="pay_order_hp_num" />
+		<result property="pay_orderer_hp_num" column="pay_orderer_hp_num" />
 		<result property="card_pay_month" column="card_pay_month" />
 		<result property="pay_order_time" column="pay_order_time" />
 	</resultMap>
@@ -43,14 +43,14 @@
 									    goods_fileName,
 									    order_goods_qty,
 										member_id,
-						                order_hp,
+						                orderer_hp,
 									    receiver_name,
 									    receiver_hp1,
 					                    delivery_address,
 					                    pay_method,
 						                card_com_name,
 						                card_pay_month,
-						                pay_order_hp_num)
+						             pay_orderer_hp_num)
 							         values (
     #{order_seq_num},
     #{order_id},
@@ -60,14 +60,14 @@
     #{goods_fileName},
     #{order_goods_qty},
     #{member_id},
-    #{order_hp},
+    #{orderer_hp},
     #{receiver_name},
     #{receiver_hp1},
     #{delivery_address},
     #{pay_method},
     #{card_com_name},
     #{card_pay_month},
-    #{pay_order_hp_num}
+    #{pay_orderer_hp_num}
 )
     ]]>
 	</insert>

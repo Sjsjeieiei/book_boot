@@ -15,9 +15,9 @@
 		<!-- 나머지 필드들도 동일하게 매핑해주세요 -->
 
 		<result property="zipcode" column="ZIPCODE" />
-		<result property="address" column="ADDRESS" />
+		<result property="member_address" column="member_address" />
 		<result property="subAddress" column="subAddress" />
-		<result property="NAKWON_COIN" column="NAKWON_COIN" />
+		<result property="bookshop_money" column="bookshop_money" />
 		<result property="joinDate" column="JOINDATE" />
 	</resultMap>
 
@@ -49,18 +49,18 @@
             MEMBER_NAME,
             HP1,
             ZIPCODE,
-            ADDRESS,
+			member_address,
            subAddress,
-            NAKWON_COIN
+			bookshop_money
         ) VALUES (
             #{member_id},
             #{member_pw},
             #{member_name},
             #{hp1},
             #{zipcode},
-            #{address},
+            #{member_address},
             #{subAddress},
-            #{NAKWON_COIN}
+            #{bookshop_money}
         ) 
     ]]>
 

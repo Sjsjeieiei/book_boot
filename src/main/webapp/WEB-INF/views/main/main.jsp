@@ -112,13 +112,13 @@
         <!-- tabCaller 버튼영역 -->
         <a class="tab-pane show active d-block" id="hero01" role="tabpanel"
            aria-labelledby="hero1"
-           href="${contextPath}/goods/goodsDetail.do?goods_id=100"> <img
+           href="${contextPath}/goods/goodsDetail.do?goods_id=420"> <img
                 src="${contextPath}/resources/img/dada/2.jpg" class="today-image"
                 data-log-props="" data-adsplatform=""
                 style="display: block; z-index: 1; position: absolute;">
         </a> <a class="tab-pane" id="hero02" role="tabpanel"
                 aria-labelledby="hero2"
-                href="${contextPath}/goods/goodsDetail.do?goods_id=300"> <img
+                href="${contextPath}/goods/goodsDetail.do?goods_id=1500"> <img
             src="${contextPath}/resources/img/dada/1.jpg" class="today-image"
             data-log-props="" data-adsplatform=""
             style="display: block; z-index: 1; position: absolute;">
@@ -136,7 +136,7 @@
             style="display: block; z-index: 1; position: absolute;">
     </a> <a class="tab-pane" id="hero05" role="tabpanel"
             aria-labelledby="hero5"
-            href="${contextPath}/goods/goodsDetail.do?goods_id=1500"> <img
+            href="${contextPath}/goods/goodsDetail.do?goods_id=1600"> <img
             src="${contextPath}/resources/img/dada/5.png" class="today-image"
             data-log-props="" data-adsplatform=""
             style="display: block; z-index: 1; position: absolute;">
@@ -250,7 +250,7 @@
             <div class="tab-pane fade show active" id="trend01" role="tabpanel" aria-labelledby="trend1">
                 <div class="d-flex justify-content-between">
                     <div class="pt-4 pe-5 flex-grow-1 box-sixing-content" style="width: 200px">
-                        <a href="${contextPath}/goods/menuGoods.do?menuGoods=만화" class="text-decoration-none">
+                        <a href="${contextPath}/goods/menuGoods.do?goodsSort=문학" class="text-decoration-none">
                             <p class="fw-bold fs-4 mb-1">전체상품</p>
                             <span class="small">보러가기 > </span>
                         </a>
