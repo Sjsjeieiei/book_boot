@@ -19,78 +19,69 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 @Component
 public class ViewNameInterceptor extends HandlerInterceptorAdapter {
 
+	//count를 간단히 불러오기 위해 intercrptor에 sqlSession추가.
 	@Autowired
 	private SqlSession sqlSession;
 
+	//일반사용자인지, 관리자인지를 구문하기 위해 memberVO 빈을 사용한다.
 	@Autowired
 	private MemberVO memberVO;
-	
 
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
 
 		HttpSession session = request.getSession();
-		try {
-			if(sqlSession==null) {
-			}
-			memberVO = (MemberVO) session.getAttribute("memberInfo");
-			if(memberVO == null) {
-			}else {
-				String member_id = memberVO.getMember_id();
 
-//				   장바구니 갯수 카운트
-				int cartCount = 0;
-				cartCount = sqlSession.selectOne("cartLen", member_id);
-				session.setAttribute("cartCount", cartCount);
-				
-				int deliveringCount = 0;
-				deliveringCount=sqlSession.selectOne("deliveringLen",member_id);
-				session.setAttribute("deliveringCount", deliveringCount);
-				if(member_id.equals("admin") == true) {
-					int goodsLen = 0;
-					goodsLen=sqlSession.selectOne("goodsLen");
-					session.setAttribute("goodsLen", goodsLen);
-//					
-					int ordersLen = 0;
-					ordersLen=sqlSession.selectOne("ordersLen");
-//					ordersLen = countDAO.ordersLen();
-					session.setAttribute("ordersLen", ordersLen);
-//					
-					int membersLen = 0;
-					membersLen=sqlSession.selectOne("membersLen");
-//					membersLen = countDAO.membersLen();
-					session.setAttribute("membersLen", membersLen);
-//					
-					Long totalSales = 0L;
-//					totalSales = (Long)countDAO.totalSales();
-					totalSales=(Long)sqlSession.selectOne("totalSales");
-					session.setAttribute("totalSales", totalSales);
-					
-				}
+		try {
+			//사용자확인
+			memberVO=(MemberVO)session.getAttribute("memberInfo");
+			String  member_id=memberVO.getMember_id();
+
+			//공통, 카트갯수, 주문갯수, 소팡머니 출력
+			int cartCount = 0;
+			cartCount=sqlSession.selectOne("mapper.book.counts.cartLen",member_id);
+			session.setAttribute("cartCount", cartCount);
+
+			int deliveringCount = 0;
+			deliveringCount=sqlSession.selectOne("mapper.book.counts.deliveringLen",member_id);
+			session.setAttribute("deliveringCount", deliveringCount);
+
+			Long bookshop_money = 0L;
+			bookshop_money=(Long)sqlSession.selectOne("mapper.book.counts.bookshop_money",member_id);
+			session.setAttribute("bookshop_money",bookshop_money);
+
+			//관리자일경우, 상품갯수, 주문건수, 총매출 출력.
+			//System.out.println(member_id);
+			if(member_id.equals("1111") == true) {
+				int goodsLen = 0;
+				goodsLen=sqlSession.selectOne("mapper.book.counts.goodsLen");
+				session.setAttribute("goodsLen", goodsLen);
+
+				int ordersLen = 0;
+				ordersLen=sqlSession.selectOne("mapper.book.counts.ordersLen");
+				session.setAttribute("ordersLen", ordersLen);
+
+				Long totalSales = 0L;
+				totalSales=(Long)sqlSession.selectOne("mapper.book.counts.totalSales");
+				session.setAttribute("totalSales", totalSales);
+
+
 			}
-			
-			
-		} catch (Exception e) {
+
+		}catch (Exception e) {
+			//System.out.println("로그인하지않았거나 예상하기 어려운 예외가 발생했습니다.");
 		}
+
+		//공통 viewName 리턴.
 		try {
 			String viewName = getViewName(request);
 			request.setAttribute("viewName", viewName);
-		} catch (Exception er) {
-			er.printStackTrace();
-		}
+		} catch (Exception e) {e.printStackTrace();}
+
 		return true;
 	}
 
-	@Override
-	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
-			ModelAndView modelAndView) throws Exception {
-	}
-
-	@Override
-	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
-			throws Exception {
-	}
-
+	//요청시 요청 url에서 viewName을 추출할 getViewName 메소드, fileName return
 	private String getViewName(HttpServletRequest request) throws Exception {
 		String contextPath = request.getContextPath();
 		String uri = (String) request.getAttribute("javax.servlet.include.request_uri");
@@ -104,6 +95,8 @@ public class ViewNameInterceptor extends HandlerInterceptorAdapter {
 		}
 
 		int end;
+
+		//파라미터가 있을경우
 		if (uri.indexOf(";") != -1) {
 			end = uri.indexOf(";");
 		} else if (uri.indexOf("?") != -1) {
@@ -112,6 +105,7 @@ public class ViewNameInterceptor extends HandlerInterceptorAdapter {
 			end = uri.length();
 		}
 
+		//경로안에 파일등이 있을경우
 		String fileName = uri.substring(begin, end);
 		if (fileName.indexOf(".") != -1) {
 			fileName = fileName.substring(0, fileName.lastIndexOf("."));
@@ -119,6 +113,8 @@ public class ViewNameInterceptor extends HandlerInterceptorAdapter {
 		if (fileName.lastIndexOf("/") != -1) {
 			fileName = fileName.substring(fileName.lastIndexOf("/", 1), fileName.length());
 		}
+
 		return fileName;
 	}
+
 }
