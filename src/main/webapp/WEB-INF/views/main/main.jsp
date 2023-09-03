@@ -112,19 +112,19 @@
         <!-- tabCaller 버튼영역 -->
         <a class="tab-pane show active d-block" id="hero01" role="tabpanel"
            aria-labelledby="hero1"
-           href="${contextPath}/goods/goodsDetail.do?goods_id=420"> <img
+           href="${contextPath}/goods/goodsDetail.do?goods_id=200"> <img
                 src="${contextPath}/resources/img/dada/2.jpg" class="today-image"
                 data-log-props="" data-adsplatform=""
                 style="display: block; z-index: 1; position: absolute;">
         </a> <a class="tab-pane" id="hero02" role="tabpanel"
                 aria-labelledby="hero2"
-                href="${contextPath}/goods/goodsDetail.do?goods_id=1500"> <img
+                href="${contextPath}/goods/goodsDetail.do?goods_id=100"> <img
             src="${contextPath}/resources/img/dada/1.jpg" class="today-image"
             data-log-props="" data-adsplatform=""
             style="display: block; z-index: 1; position: absolute;">
     </a> <a class="tab-pane" id="hero03" role="tabpanel"
             aria-labelledby="hero3"
-            href="${contextPath}/goods/goodsDetail.do?goods_id=200"> <img
+            href="${contextPath}/goods/goodsDetail.do?goods_id=300"> <img
             src="${contextPath}/resources/img/dada/3.jpg" class="today-image"
             data-log-props="" data-adsplatform=""
             style="display: block; z-index: 1; position: absolute;">
