@@ -1,6 +1,6 @@
 # spring boot를 통한 aws 배포
 
-http://ec2-3-128-204-47.us-east-2.compute.amazonaws.com:8070/main/main.do
+http://ec2-18-217-235-86.us-east-2.compute.amazonaws.com:8070/main/main.do
 <div align="center">
 	<h3>:movie_camera: 메인페이지</h3>
 	<video src="https://github.com/Sjsjeieiei/Bookfinal/assets/99542956/4f1c5df0-0217-4472-9971-5aa74a443f5f" />
