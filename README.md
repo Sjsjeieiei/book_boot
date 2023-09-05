@@ -41,5 +41,6 @@ http://ec2-18-188-249-94.us-east-2.compute.amazonaws.com:8070/main/main.do
 </div>
 <div align="center">
 전체영상 <br>
-http://naver.me/xuiYBVUi
+요금문제로 인해 영상첨부
+https://youtu.be/OtylMgNTQOE
 </div>
