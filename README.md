@@ -35,10 +35,7 @@ http://ec2-18-217-141-240.us-east-2.compute.amazonaws.com:8070/main/main.do
 	<h3>:movie_camera:관리자 주문,회원</h3>
 	<video src="https://github.com/Sjsjeieiei/Bookfinal/assets/99542956/b2f9d694-4aff-45cb-84e1-057eef08509a" />
 </div>
-  <div align="center">
-	<h3>:movie_camera:네이버 로그인</h3>
-	<video src="https://github.com/Sjsjeieiei/Bookfinal/assets/99542956/339433cf-962d-4abd-ae08-b3605475da2d" />
-</div>
+
 <div align="center">
 전체영상 <br>
 요금문제로 인해 영상첨부
