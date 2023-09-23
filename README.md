@@ -1,6 +1,7 @@
 # spring boot를 통한 aws 배포
 
-http://ec2-18-217-141-240.us-east-2.compute.amazonaws.com:8070/main/main.do
+https://wind-dewberry-ca7.notion.site/c12c426ca50242168aeb1c87c536e31a?pvs=4
+
 <div align="center">
 	<h3>:movie_camera: 메인페이지</h3>
 	<video src="https://github.com/Sjsjeieiei/Bookfinal/assets/99542956/4f1c5df0-0217-4472-9971-5aa74a443f5f" />
