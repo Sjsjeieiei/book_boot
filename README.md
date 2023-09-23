@@ -23,7 +23,7 @@ https://wind-dewberry-ca7.notion.site/c12c426ca50242168aeb1c87c536e31a?pvs=4
 </div>
 		
 <div align="center">
-	<h3>:movie_camera:naver 장바구니,바로구매</h3>
+	<h3>:movie_camera:장바구니,바로구매</h3>
 	<video src="https://github.com/Sjsjeieiei/Bookfinal/assets/99542956/c0e7ac75-b8b4-448e-ac6e-878123e8b671" />
 </div>
 
@@ -35,10 +35,4 @@ https://wind-dewberry-ca7.notion.site/c12c426ca50242168aeb1c87c536e31a?pvs=4
   <div align="center">
 	<h3>:movie_camera:관리자 주문,회원</h3>
 	<video src="https://github.com/Sjsjeieiei/Bookfinal/assets/99542956/b2f9d694-4aff-45cb-84e1-057eef08509a" />
-</div>
-
-<div align="center">
-전체영상 <br>
-요금문제로 인해 영상첨부
-https://youtu.be/OtylMgNTQOE
 </div>
