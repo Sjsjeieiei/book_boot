@@ -1,4 +1,4 @@
-# spring boot를 통한 aws 배포
+# 노션
 
 https://wind-dewberry-ca7.notion.site/c12c426ca50242168aeb1c87c536e31a?pvs=4
 
