@@ -36,3 +36,12 @@ https://wind-dewberry-ca7.notion.site/c12c426ca50242168aeb1c87c536e31a?pvs=4
 	<h3>:movie_camera:관리자 주문,회원</h3>
 	<video src="https://github.com/Sjsjeieiei/Bookfinal/assets/99542956/b2f9d694-4aff-45cb-84e1-057eef08509a" />
 </div>
+		 <div align="center">
+PPT <br>
+https://www.canva.com/design/DAFr_l8Xt2Q/gch5xd2RZBHBT8iLDud8aQ/edit?utm_content=DAFr_l8Xt2Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+		 </div>
+<br>	
+		 <div align="center">
+기획자료<br>
+http://naver.me/Gdi64VXF
+</div>
